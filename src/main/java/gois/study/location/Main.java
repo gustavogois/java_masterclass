@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
-    private static Map<Integer, Location> locations = new HashMap<Integer, Location>();
 
     public static void main(String[] args) {
         // Change the program to allow players to type full words, or phrases, then move to the
@@ -16,7 +15,9 @@ public class Main {
         //
         // Single letter commands (N, W, S, E, Q) should still be available.
 
-	    Scanner scanner = new Scanner(System.in);
+	    final Locations locations = new Locations();
+
+        Scanner scanner = new Scanner(System.in);
 
         Map<String, Integer> tempExit = new HashMap<String, Integer>();
         locations.put(0, new Location(0, "You are sitting in front of a computer learning Java",null));
